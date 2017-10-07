@@ -140,15 +140,6 @@ p,
   display: inline-block;
 }
 
-.badge {
-  display: inline-block;
-  padding: .3em .5em .1em;
-  font-size: .7rem;
-  font-weight: bold;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
 .btn {
   display: inline-block;
   padding: .6em 1em;
@@ -491,11 +482,6 @@ p,
 
 .clientList .landscape-logo {
   height: 30px;
-}
-
-.clientList .badge {
-  background: var(--bossanova);
-  color: var(--brick);
 }
 
 
