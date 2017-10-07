@@ -114,7 +114,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
@@ -567,7 +567,7 @@ p,
   background-image: url('img/bio-bg1.svg');
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 150% 150%;
+  background-size: 180% 150%;
   align-items: center;
   justify-content: center;
 }
