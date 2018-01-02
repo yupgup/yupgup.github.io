@@ -143,20 +143,33 @@ p,
 .btn {
   display: inline-block;
   padding: .6em 1em;
-  border-radius: 10px;
-  box-shadow: 0 1px 2px #292929;
+  border: none;
+  border-radius: .35em;
+  /*box-shadow: 0 1px 2px #292929;*/
   background: var(--mandy);
   background: linear-gradient(to bottom, var(--mandy) 0%, #B2393B 100%);
-  font-size: 1.8rem;
+  font-size: 1rem;
   font-weight: bold;
   line-height: 1;
   color: var(--bossanova);
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .btn:hover {
   background: var(--dusk);
+}
+
+label {
+  display: block;
+  margin-bottom: .35em;
+  font-weight: bold;
+}
+
+input {
+  padding: .6em;
+  font-size: 1rem;
 }
 
 /*
@@ -223,7 +236,13 @@ p,
   margin-top: 20vw;
 }
 
+/*
+  TODO: Ok.. this should be a class. Right?
+
+  Yes. Yes Mike, it should be a class... but we're in a hurry.
+*/
 .slogan:before,
+.newsletter:before, /* Used on TM page */
 .siteNav:before,
 .siteNav:after,
 .work:before,
@@ -301,14 +320,16 @@ p,
   animation-delay: 750ms;
 }
 
-.slogan {
+.slogan,
+.newsletter {
   position: relative;
   margin-top: 4vw;
   padding-bottom: 20vw;
   background: var(--bossanova);
 }
 
-.slogan:before {
+.slogan:before,
+.newsletter:before {
   top: -9vw;
   height: 10vw;
   background-image: url('img/swish.svg');
@@ -537,6 +558,10 @@ p,
   margin: 1.5rem 0;
 }
 
+.contactNav .btn {
+  font-size: 1.8rem;
+}
+
 /*
   MEDIA QUERIES
 */
@@ -549,7 +574,8 @@ p,
     max-width: 50ch;
   }
 
-  .slogan {
+  .slogan,
+  .newsletter {
     padding-bottom: 12vw;
   }
 
