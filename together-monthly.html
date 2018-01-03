@@ -1,0 +1,205 @@
+<!doctype html>
+<!--
+¸.·´¯`·.´¯`·.¸¸.·´¯`·.¸><(((º>
+
+See something *fishy*?
+Drop us a line or just say hi: hello@yupgup.com
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Join Together Monthly, a newsletter for conference organizers &amp; community managers - YupGup</title>
+  <meta name="description" content="YupGup provides design solutions and strategy for growing communities, events, and more.">
+  <meta name="author" content="YupGup, LLC">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="yupgup.css">
+
+  <style>
+    .gupHat {
+      display: block;
+      padding: 10px;
+      background: whitesmoke;
+      font-size: .9rem;
+    }
+
+    .gupHat:before {
+      display: inline-block;
+      margin-right: .3em;
+      height: 1rem;
+      width: 1rem;
+      content: "←";
+    }
+
+    .tmHeader {
+      padding-top: var(--space);
+      padding-bottom: 0;
+      text-align: center;
+    }
+
+    .broughtBy {
+      margin: 6px 0 0;
+      font-size: .75rem;
+      color: var(--med-gray);
+    }
+
+    /*
+      Tell 'em all about the newsletter
+    */
+
+    .newsletter {
+      color: white;
+    }
+
+    h1 {
+      margin-bottom: var(--block-space);
+      text-align: center;
+    }
+
+    .newsletterForm {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      flex-flow: row wrap;
+      margin: 0 auto var(--space);
+      max-width: 500px;
+    }
+
+    .field {
+      margin-right: .35rem;
+      flex: 1 1 auto;
+    }
+
+    .btn {
+      color: white;
+    }
+
+    .btn,
+    .email {
+      height: 50px;
+      border-radius: .35em;
+    }
+
+    .email {
+      display: block;
+      width: 100%;
+      border: 6px solid var(--finn);
+    }
+
+    .disclaimer {
+      display: block;
+      margin: .5rem auto 0;
+      max-width: 800px;
+      font-size: .65em;
+    }
+
+    .copyright {
+      margin-top: var(--block-space);
+      text-align: center;
+    }
+  </style>
+</head>
+</html>
+
+<body>
+
+<a
+  href="/"
+  class="gupHat">Swim over to <strong>YupGup.com</strong></a>
+
+<header class="block tmHeader">
+  <img
+    src="img/together-monthly-logo.svg"
+    width="300"
+    class="tmLogo"
+    alt="An opened enveloped. The inside of the envelope features a gradient of dark colors. Beneath the envelope are the words 'Together Month'" />
+
+  <p
+    class="broughtBy">By your friends at <strong>YupGup</strong>
+  </p>
+</header>
+
+<main class="siteMain">
+  <div class="block newsletter">
+    <div class="container">
+      <h1>Join <strong>Together Monthly</strong>, a newsletter for conference organizers &amp; community managers.</h1>
+
+      <form
+        action="https://yupgup.us17.list-manage.com/subscribe/post?u=41f281f7feba07c8dc59ae4c9&amp;id=c1e32ec4f6"
+        method="post"
+        class="newsletterForm">
+
+        <div class="field">
+          <!--
+            We considered creating a zine but emails are a better way
+            to test the idea.
+
+            But really, we just want to build something that helps
+            those helping others.
+          -->
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            value=""
+            name="EMAIL"
+            class="email"
+            required
+            id="email"
+            placeholder="your_rad_name@place.fish">
+        </div>
+
+        <div
+          style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input type="text" name="b_41f281f7feba07c8dc59ae4c9_c1e32ec4f6" tabindex="-1" value="">
+        </div>
+
+        <button
+          type="submit"
+          name="subscribe"
+          id="mc-embedded-subscribe"
+          class="btn">Subscribe</button>
+
+        <p>
+          <small class="disclaimer">Psst... <strong>We will only send you this newsletter</strong>. We get Hulk-level angry when companies throw us on a million lists without our permission, so we 100% won't do that to you.</small>
+        </p>
+      </form>
+
+      <!--
+      <h3>Chock full of togetherness:</h3>
+      <ul class="offeringList">
+        <li>Interviews with community leaders</li>
+        <li>Curated news from people like you</li>
+        <li>Notes from the YupGup blog</li>
+        <li>Interesting people to follow</li>
+        <li>Books reviews</li>
+        <li>&amp; tons more!</li>
+      </ul>
+      -->
+
+      <p class="copyright">
+        <small>
+          &copy; 2018 <strong>YupGup LLC.</strong> We think you’re pretty awesome.
+        </small>
+      </p>
+    </div>
+  </div>
+</main>
+
+<!--
+  Could Jonah Jameson use Google
+  from The Daily Bugle
+  in an effort to be frugal
+  to frame Spider-man
+  for stealing all the bluegill?
+-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107574835-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-107574835-1');
+</script>
+</body>
+</html>
