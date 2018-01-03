@@ -180,14 +180,16 @@ input {
   color: var(--bossanova);
 }
 
-.siteMain a {
+.siteMain a,
+.gupHat span {
   padding-bottom: .15em;
   box-shadow: 0 -5px  rgba(104, 48, 87, .5) inset;
   text-decoration: none;
   color: var(--finn);
 }
 
-.siteMain a:hover {
+.siteMain a:hover,
+.gupHat:hover span {
   box-shadow: none;
 }
 
