@@ -180,7 +180,7 @@ input {
 }
 
 .siteMain a,
-.hat span {
+.topHat span {
   padding-bottom: .15em;
   box-shadow: 0 -5px  rgba(104, 48, 87, .5) inset;
   text-decoration: none;
@@ -188,7 +188,7 @@ input {
 }
 
 .siteMain a:hover,
-.hat:hover span {
+.topHat:hover span {
   box-shadow: none;
 }
 
