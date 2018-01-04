@@ -145,7 +145,6 @@ p,
   padding: .6em 1em;
   border: none;
   border-radius: .35em;
-  /*box-shadow: 0 1px 2px #292929;*/
   background: var(--mandy);
   background: linear-gradient(to bottom, var(--mandy) 0%, #B2393B 100%);
   font-size: 1rem;
@@ -181,7 +180,7 @@ input {
 }
 
 .siteMain a,
-.gupHat span {
+.hat span {
   padding-bottom: .15em;
   box-shadow: 0 -5px  rgba(104, 48, 87, .5) inset;
   text-decoration: none;
@@ -189,7 +188,7 @@ input {
 }
 
 .siteMain a:hover,
-.gupHat:hover span {
+.hat:hover span {
   box-shadow: none;
 }
 
@@ -221,8 +220,16 @@ input {
   LAYOUT
 */
 
+.siteMain {
+  margin-top: 20vw;
+}
+
+.block {
+  padding: var(--block-space) var(--gutters);
+}
+
 /*
-  Containers confirm to our grid. Blocks can contain.. err.. containers.. As
+  Containers conform to our grid. Blocks can contain.. err.. containers.. As
   such, a container is kind of dumb. It just sets up our max width.
 */
 .container {
@@ -230,26 +237,14 @@ input {
   max-width: var(--site-width);
 }
 
-.block {
-  padding: var(--block-space) var(--gutters);
-}
-
-.siteMain {
-  margin-top: 20vw;
-}
-
 /*
-  TODO: Ok.. this should be a class. Right?
-
-  Yes. Yes Mike, it should be a class... but we're in a hurry.
+  Setups the pseudo elements we need to handle visual
+  transitions between blocks.
 */
-.slogan:before,
-.newsletter:before, /* Used on TM page */
-.siteNav:before,
-.siteNav:after,
-.work:before,
-.work:after,
-.contact:before {
+.transition:before,
+.transition:after,
+.transition--before:before,
+.transition--after:after {
   position: absolute;
   left: 0;
   z-index: -1;
@@ -276,29 +271,29 @@ input {
   text-align: center;
 }
 
-.🐟 {
+.guppy {
   width: 10vw;
   min-width: 80px;
   max-width: 180px;
 }
 
-.🐟 .st0 {
+.guppy .st0 {
   fill: var(--mandy);
 }
 
-.🐟 .st1 {
+.guppy .st1 {
   fill: var(--brick);
 }
 
-.🐟 .st2 {
+.guppy .st2 {
   fill: var(--dusk);
 }
 
-.🐟 .st3 {
+.guppy .st3 {
   fill: var(--camelot);
 }
 
-.🐟 .st4 {
+.guppy .st4 {
   fill: var(--bossanova);
 }
 
@@ -402,6 +397,7 @@ input {
 /*
   LAYOUT: Footer
 */
+
 .siteFooter {
   background: var(--bossanova);
   color: #FFFFFF;
@@ -465,7 +461,6 @@ input {
 
 
 /* Services */
-
 .services img {
   display: none;
 }
@@ -562,6 +557,25 @@ input {
 
 .contactNav .btn {
   font-size: 1.8rem;
+}
+
+/*
+  LANDING PAGES
+*/
+.topHat {
+  display: block;
+  padding: 10px 10px 14px;
+  background: whitesmoke;
+  font-size: .9rem;
+  text-decoration: none;
+}
+
+.topHat:before {
+  display: inline-block;
+  margin-right: .3em;
+  height: 1rem;
+  width: 1rem;
+  content: "←";
 }
 
 /*
