@@ -150,7 +150,7 @@ p,
   font-size: 1rem;
   font-weight: bold;
   line-height: 1;
-  color: var(--bossanova);
+  color: white;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
@@ -169,6 +169,12 @@ label {
 input {
   padding: .6em;
   font-size: 1rem;
+}
+
+.broughtBy {
+  margin: 6px 0 0;
+  font-size: .75rem;
+  color: var(--med-gray);
 }
 
 /*
@@ -399,14 +405,26 @@ input {
 */
 
 .siteFooter {
+  position: relative;
+  margin-top: 10vw;
   background: var(--bossanova);
   color: #FFFFFF;
 }
+
+.siteFooter:before {
+  top: -9vw;
+  height: 10vw;
+  background-image: url('img/swish.svg');
+}
+
 
 .siteFooter .block-heading {
   font-size: 3rem;
 }
 
+.siteFooter .btn {
+  color: var(--bossanova)
+}
 
 /*
   BLOCKS
@@ -440,17 +458,6 @@ input {
 
 .work:after {
   bottom: -9vw;
-}
-
-.contact {
-  position: relative;
-  margin-top: 10vw;
-}
-
-.contact:before {
-  top: -9vw;
-  height: 10vw;
-  background-image: url('img/swish.svg');
 }
 
 /*
@@ -564,9 +571,9 @@ input {
 */
 .topHat {
   display: block;
-  padding: 10px 10px 14px;
+  padding: 6px 10px 12px;
   background: whitesmoke;
-  font-size: .9rem;
+  font-size: .8rem;
   text-decoration: none;
 }
 
