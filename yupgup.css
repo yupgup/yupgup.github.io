@@ -460,6 +460,61 @@ input {
   bottom: -9vw;
 }
 
+/* Newsletter block */
+
+.newsletter {
+  color: white;
+}
+
+.newsletter h1,
+.newsletter h2 {
+  margin-bottom: var(--block-space);
+  text-align: center;
+}
+
+.newsletter .copyright {
+  margin-top: var(--block-space);
+  text-align: center;
+}
+
+.newsletterForm {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-flow: row wrap;
+  margin: 0 auto var(--space);
+  max-width: 500px;
+}
+
+.newsletterForm .field {
+  margin-right: .35rem;
+  flex: 1 1 auto;
+}
+
+.newsletterForm .btn {
+  color: white;
+}
+
+.newsletterForm .btn,
+.newsletterForm .email {
+  height: 50px;
+  border-radius: .35em;
+}
+
+.newsletterForm .email {
+  display: block;
+  width: 100%;
+  border: 6px solid var(--finn);
+}
+
+.newsletterForm .disclaimer {
+  display: block;
+  margin: .5rem auto 0;
+  max-width: 800px;
+  font-size: .65em;
+}
+
+
 /*
   MODULES
   Bits of pieces of HTML that together make a single, compact *thing*. These go

@@ -35,7 +35,7 @@ Drop us a line or just say hi: hello@yupgup.com
       font-weight: normal;
     }
 
-    .btn {
+    .btn--download {
       font-size: 1.4rem;
     }
 
@@ -64,7 +64,7 @@ Drop us a line or just say hi: hello@yupgup.com
 <header class="stickerHeader">
   <h1>Download FREE pronoun templates to print stickers or buttons for your next event.</h1>
   <h2>Templates (PDFs) come in two sizes: 1" and 1.5".</h2>
-  <a href="#" class="btn">Download Pack (.zip)</a>
+  <a href="#" class="btn btn--download">Download Pack (.zip)</a>
 </header>
 
 <main class="block">
@@ -180,9 +180,51 @@ Drop us a line or just say hi: hello@yupgup.com
   </div>
 </main>
 
-<footer class="siteFooter block transition--before">
+<footer class="block transition--before newsletter">
   <div class="container">
-    <p>
+    <h2>Want more free stuff? Join <strong>Together Monthly</strong>, a newsletter for conference organizers and community managers.</h2>
+
+    <form
+      action="https://yupgup.us17.list-manage.com/subscribe/post?u=41f281f7feba07c8dc59ae4c9&amp;id=c1e32ec4f6"
+      method="post"
+      class="newsletterForm">
+
+      <div class="field">
+        <!--
+          We considered creating a zine but emails are a better way
+          to test the idea.
+
+          But really, we just want to build something that helps
+          those helping others.
+        -->
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          value=""
+          name="EMAIL"
+          class="email"
+          required
+          id="email"
+          placeholder="your_rad_name@place.fish">
+      </div>
+
+      <div
+        style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_41f281f7feba07c8dc59ae4c9_c1e32ec4f6" tabindex="-1" value="">
+      </div>
+
+      <button
+        type="submit"
+        name="subscribe"
+        id="mc-embedded-subscribe"
+        class="btn">Subscribe</button>
+
+      <p>
+        <small class="disclaimer">Psst! <strong>We will only send you this newsletter</strong>. We get Hulk-level angry when companies throw us on a million lists without our permission, so we 100% won’t do that to you.</small>
+      </p>
+    </form>
+
+    <p class="copyright">
       <small>
         &copy; 2018 <strong>YupGup LLC.</strong> We think you’re pretty awesome.
       </small>
