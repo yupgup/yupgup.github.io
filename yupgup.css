@@ -628,14 +628,14 @@ input {
 
 .socialNav a {
   display: inline-block;
-  margin-right: 1.5rem;
+  margin-right: .85rem;
   box-shadow: none;
 }
 
 .socialNav .socialIcon {
   display: inline-block;
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   fill: var(--camelot);
 }
 
@@ -752,6 +752,15 @@ input {
 
   .gup-card {
     padding-top: 2rem;
+  }
+
+  .socialNav a {
+    margin-right: 1.5rem;
+  }
+
+  .socialNav .socialIcon {
+    width: 64px;
+    height: 64px;
   }
 }
 
