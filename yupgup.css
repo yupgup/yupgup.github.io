@@ -621,6 +621,32 @@ input {
   font-size: 1.8rem;
 }
 
+/* Social Icons */
+.socialNav {
+  margin: 3rem 0;
+}
+
+.socialNav a {
+  display: inline-block;
+  margin-right: 1.5rem;
+  box-shadow: none;
+}
+
+.socialNav .socialIcon {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  fill: var(--camelot);
+}
+
+.socialNav .socialIcon:hover {
+  fill: var(--dusk);
+}
+
+.socialNav .socialIcon:last-child {
+  margin-right: 0;
+}
+
 /*
   LANDING PAGES
 */
