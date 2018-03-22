@@ -472,6 +472,11 @@ input {
   text-align: center;
 }
 
+.newsletter a {
+  color: white;
+  box-shadow: 0 -5px  var(--camelot) inset;
+}
+
 .newsletter .copyright {
   margin-top: var(--block-space);
   text-align: center;
@@ -513,7 +518,6 @@ input {
   max-width: 800px;
   font-size: .65em;
 }
-
 
 /*
   MODULES
