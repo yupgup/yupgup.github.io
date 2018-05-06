@@ -234,12 +234,17 @@ input {
   padding: var(--block-space) var(--gutters);
 }
 
+.block p:only-child {
+  margin-bottom: 0;
+}
+
 /*
   Containers conform to our grid. Blocks can contain.. err.. containers.. As
   such, a container is kind of dumb. It just sets up our max width.
 */
 .container {
   margin: 0 auto;
+  width: 100%;
   max-width: var(--site-width);
 }
 
