@@ -234,7 +234,7 @@ input {
   padding: var(--block-space) var(--gutters);
 }
 
-.block p:only-child {
+.block p:last-child {
   margin-bottom: 0;
 }
 
@@ -252,6 +252,10 @@ input {
   Setups the pseudo elements we need to handle visual
   transitions between blocks.
 */
+.transition {
+  position: relative;
+}
+
 .transition:before,
 .transition:after,
 .transition--before:before,

@@ -23,6 +23,7 @@ Drop us a line or just say hi: hello@yupgup.com
     }
 
     .caseStudyHeader {
+      position: relative;
       margin-bottom: 10vw;
       background: var(--finn);
       text-align: center;
@@ -30,20 +31,36 @@ Drop us a line or just say hi: hello@yupgup.com
     }
 
     .caseStudyHeader:after {
-      top: 92%;
+      bottom: -8vw;
       height: 10vw;
       background-image: url('../img/swish3.svg');
     }
 
-    .workDisplay--list .container {
-      display: flex;
-      justify-content: space-between;
+    .caseStudyHeader .lead {
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    /* Images should be 16:9 */
+    .workDisplay {
+      padding-left: var(--gutters);
+      padding-right: var(--gutters);
+    }
+
     .workDisplay--list .img {
       display: block;
-      max-width: calc(100% * 1/3 - 20px);
+      margin-bottom: var(--space);
+    }
+
+    @media (min-width: 1000px) {
+      .workDisplay--list .container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .workDisplay--list .img {
+        margin-bottom: 0;
+        max-width: calc(100% * 1/3 - 20px);
+      }
     }
   </style>
 </head>
@@ -64,6 +81,12 @@ Drop us a line or just say hi: hello@yupgup.com
     </div>
   </header>
 
+  <div class="block">
+    <div class="container">
+      <p>There is endless potential while working within the space theme. I wanted to make items that stood out  amongst a sea of swag at conferences and card designs that clients actually want to keep.</p>
+    </diV>
+  </div>
+
   <section class="workDisplay">
     <div class="container">
       <img src="https://loremflickr.com/1920/1080" />
@@ -75,40 +98,44 @@ Drop us a line or just say hi: hello@yupgup.com
       <p>
         For several years I’ve had the pleasure of working with Lincoln Loop for some of their marketing design needs. Each holiday season they send existing clients a gift package, consisting of delightful treats and a custom card, wishing them well and inviting them to partner up again in the future.
       </p>
+    </div>
+  </section>
 
+  <section class="workDisplay workDisplay--list">
+    <div class="container">
+      <div class="img">
+        <img src="https://loremflickr.com/1920/1080" />
+      </div>
+      <div class="img">
+        <img src="https://loremflickr.com/1920/1080" />
+      </div>
+      <div class="img">
+        <img src="https://loremflickr.com/1920/1080" />
+      </div>
+    </div>
+  </section>
+
+  <div class="block">
+    <div class="container">
       <p>
         As frequent conference goers the Lincoln Loop team is also often in need of stickers, notebooks, coloring books, and promotional flyers. I even put together a custom coloring book to be distributed to kids (and adults!) at PyCon in 2017. The space theme has been a consistent and enjoyable constraint within most of these designs, but occasionally the team is looking to promote their own products as well.
       </p>
     </div>
-  </section>
+  </div>
 
-  <section class="workDisplay--list">
+
+  <section class="workDisplay">
     <div class="container">
-      <div class="img">
-        <img src="https://loremflickr.com/640/360" width="640"/>
-      </div>
-      <div class="img">
-        <img src="https://loremflickr.com/640/360" width="640"/>
-      </div>
-      <div class="img">
-        <img src="https://loremflickr.com/640/360" width="640"/>
-      </div>
+      <img src="https://loremflickr.com/1920/1080" />
     </div>
   </section>
 
   <section class="block">
     <div class="container">
-      <h2>Requirements </h2>
-
+      <h2>Requirements</h2>
       <p>
         Work within established brand guidelines and colors, utilize the compay’s frequent use of space imagery, leave a lasting impression on clients, grab attention at events, custom icons
       </p>
-    </div>
-  </section>
-
-  <section class="workDisplay">
-    <div class="container">
-      <img src="https://loremflickr.com/1920/1080" />
     </div>
   </section>
 </main>
