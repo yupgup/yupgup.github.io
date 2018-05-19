@@ -792,10 +792,6 @@ input {
     width: 33.33%;
   }
 
-  .clientList {
-    max-width: 900px;
-  }
-
   .clientList li {
     display: flex;
     align-items: center;
