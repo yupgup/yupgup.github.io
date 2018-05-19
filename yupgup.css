@@ -712,6 +712,10 @@ input {
   padding-right: var(--gutters);
 }
 
+.workDisplay .container {
+  text-align: center;
+}
+
 .workDisplay--list .img {
   display: block;
   margin-bottom: var(--space);
