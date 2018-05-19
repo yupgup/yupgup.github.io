@@ -707,6 +707,7 @@ input {
 }
 
 .workDisplay {
+  margin-bottom: var(--space);
   padding-left: var(--gutters);
   padding-right: var(--gutters);
 }
@@ -717,6 +718,10 @@ input {
 }
 
 @media (min-width: 1000px) {
+  .caseStudyHeader + .block {
+    padding-top: 0;
+  }
+
   .workDisplay--list .container {
     display: flex;
     justify-content: space-between;
