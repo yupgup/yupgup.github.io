@@ -577,6 +577,38 @@ input {
   height: 30px;
 }
 
+.testimonial-text,
+.testimonial-attr {
+  position: relative;
+}
+
+.testimonial-text:before {
+  position: absolute;
+  top: -.6rem;
+  left: -3rem;
+  display: block;
+  font-size: 6rem;
+  display: block;
+  content: "\201C";
+  opacity: .7;
+  line-height: 1;
+}
+
+.testimonial-attr {
+  font-size: .9rem;
+}
+
+.testimonial-attr:before {
+  margin-right: .5em;
+  width: 1.25rem;
+  height: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  background: currentColor;
+  line-height: 1;
+  content: "";
+}
+
 
 /* About */
 .gup {
