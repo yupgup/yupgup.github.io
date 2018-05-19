@@ -548,7 +548,7 @@ input {
   background: var(--finn);
 }
 
-.offeringList li {
+.gridList li {
   margin-bottom: var(--space);
   list-style-position: inside;
   list-style-type: disc;
@@ -722,10 +722,6 @@ input {
 }
 
 @media (min-width: 720px) {
-  .caseStudyHeader + .block {
-    padding-top: var(--space);
-  }
-
   .workDisplay--list .container {
     display: flex;
     justify-content: space-between;
@@ -785,13 +781,13 @@ input {
     min-width: 240px;
   }
 
-  .offeringList {
+  .gridList {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
   }
 
-  .offeringList li {
+  .gridList li {
     box-sizing: border-box;
     width: 33.33%;
   }
