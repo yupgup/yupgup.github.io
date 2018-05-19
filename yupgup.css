@@ -717,7 +717,7 @@ input {
   margin-bottom: var(--space);
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 720px) {
   .caseStudyHeader + .block {
     padding-top: 0;
   }
