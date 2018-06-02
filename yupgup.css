@@ -409,6 +409,12 @@ input {
   color: var(--brick);
 }
 
+.projectNav {
+  display: flex;
+  justify-content: space-between;
+  }
+}
+
 /*
   LAYOUT: Footer
 */
