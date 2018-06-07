@@ -409,21 +409,6 @@ input {
   color: var(--brick);
 }
 
-.projectNav {
-  display: flex;
-  justify-content: space-between;
-}
-
-.projectNavLink-projectName {
-  display: block;
-  font-size: .8rem;
-}
-
-.projectNavLink:nth-child(2) {
-  text-align: right;
-}
-
-
 /*
   LAYOUT: Footer
 */
@@ -780,6 +765,19 @@ input {
   }
 }
 
+.projectNav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectNavLink-projectName {
+  display: block;
+  font-size: .8rem;
+}
+
+.projectNavLink:nth-child(2) {
+  text-align: right;
+}
 
 /*
   MEDIA QUERIES
