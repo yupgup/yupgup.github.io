@@ -768,18 +768,25 @@ input {
 .projectNav {
   display: flex;
   justify-content: space-between;
+  flex-flow: row wrap;
+  padding: 0 var(--gutters);
 }
 
 a.projectNavLink { /* FIXME: Specificity no-no */
   position: relative;
   z-index: 1;
   display: inline-block;
-  width: 30%;
+  flex: 0 1 360px;
+  margin-bottom: 1.5rem;
   padding: .75em;
   border: 2px solid var(--light-gray);
   border-radius: 14px;
   box-shadow: none;
   text-align: right;
+}
+
+.projectNavLink:hover {
+  border-color: var(--dusk);
 }
 
 .projectNavLink:after {
@@ -802,6 +809,7 @@ a.projectNavLink { /* FIXME: Specificity no-no */
 }
 
 .projectNavLink:nth-child(2) {
+  margin-left: auto;
   text-align: left;
 }
 
@@ -902,6 +910,10 @@ a.projectNavLink { /* FIXME: Specificity no-no */
     width: 64px;
     height: 64px;
   }
+
+  .projectNavLink {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -912,5 +924,9 @@ a.projectNavLink { /* FIXME: Specificity no-no */
 
   .slogan-text {
     font-size: 3rem;
+  }
+
+  .projectNav {
+    padding: 0;
   }
 }
