@@ -791,14 +791,14 @@ a.projectNavLink { /* FIXME: Specificity no-no */
 
 .projectNavLink:after {
   position: absolute;
-  top: 0;
+  top: 15%;
   left: .5em;
-  height: 80%;
+  height: 70%;
   width: 38px;
   background-image: url(img/button-arrow.svg);
   background-repeat: no-repeat;
   background-size: auto 100%;
-  transform: rotate(180deg) translateY(-15%);
+  transform: rotate(180deg);
   content: "";
 }
 
@@ -816,7 +816,7 @@ a.projectNavLink { /* FIXME: Specificity no-no */
 .projectNavLink:nth-child(2):after {
   left: auto;
   right: .5em;
-  transform: rotate(0) translateY(15%);
+  transform: rotate(0);
 }
 
 /*
