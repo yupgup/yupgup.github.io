@@ -144,7 +144,7 @@ p,
   display: inline-block;
   padding: .6em 1em;
   border: none;
-  border-radius: .35em;
+  border-radius: 14px;
   background: var(--mandy);
   background: linear-gradient(to bottom, var(--mandy) 0%, #B2393B 100%);
   font-size: 1rem;
@@ -770,13 +770,45 @@ input {
   justify-content: space-between;
 }
 
+a.projectNavLink { /* FIXME: Specificity no-no */
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 30%;
+  padding: .75em;
+  border: 2px solid var(--light-gray);
+  border-radius: 14px;
+  box-shadow: none;
+  text-align: right;
+}
+
+.projectNavLink:after {
+  position: absolute;
+  top: 0;
+  left: .5em;
+  height: 80%;
+  width: 38px;
+  background-image: url(img/button-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  transform: rotate(180deg) translateY(-15%);
+  content: "";
+}
+
 .projectNavLink-projectName {
   display: block;
   font-size: .8rem;
+  font-weight: bold;
 }
 
 .projectNavLink:nth-child(2) {
-  text-align: right;
+  text-align: left;
+}
+
+.projectNavLink:nth-child(2):after {
+  left: auto;
+  right: .5em;
+  transform: rotate(0) translateY(15%);
 }
 
 /*
