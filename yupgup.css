@@ -719,6 +719,10 @@ input {
   margin-top: 0;
 }
 
+.caseStudyPage .container {
+  max-width: 720px;
+}
+
 .caseStudyHeader {
   position: relative;
   margin-bottom: 10vw;
@@ -776,13 +780,17 @@ a.projectNavLink { /* FIXME: Specificity no-no */
   position: relative;
   z-index: 1;
   display: inline-block;
-  flex: 0 1 360px;
+  flex: 0 1 300px;
   margin-bottom: 1.5rem;
   padding: .75em;
   border: 2px solid var(--light-gray);
   border-radius: 14px;
   box-shadow: none;
   text-align: right;
+}
+
+a.projectNavLink:first-child {
+  margin-right: 1rem;
 }
 
 .projectNavLink:hover {
