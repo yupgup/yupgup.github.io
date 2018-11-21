@@ -142,6 +142,7 @@ p,
 
 .btn {
   display: inline-block;
+  margin-top: calc(var(--space) * 1.2);
   padding: .6em 1em;
   border: none;
   border-radius: 14px;
@@ -523,7 +524,7 @@ input {
 
 .newsletterForm .disclaimer {
   display: block;
-  margin: .5rem auto 0;
+  margin: .9rem auto 0;
   max-width: 800px;
   font-size: .65em;
 }
