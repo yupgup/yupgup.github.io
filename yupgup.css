@@ -436,6 +436,10 @@ input {
   color: var(--bossanova)
 }
 
+.bod-logo {
+  max-width: 150px;
+}
+
 /*
   BLOCKS
   Basically major divisions of the page that aren't header/footer.
