@@ -111,7 +111,7 @@ h2 {
   font-size: 4em;
   line-height: 1;
   flex-grow: .5;
-  margin-top: 0;
+  margin: 0 0 .7em;
 }
 
 /* Main content */
@@ -217,6 +217,7 @@ blockquote p {
 
 input, label, textarea {
   display: block;
+  font-family: 'SofiaPro';
 }
 
 label {
@@ -251,4 +252,18 @@ input, textarea {
 .footer-link:hover  {
   color: #8B335B;
   border-bottom: 2px solid #8B335B;
+}
+
+@media (max-width: 900px) {
+  .main, .footer {
+    padding: 1.5em 2.5em;
+  }
+
+  .header-details, .work-details, .price-details, .work-form {
+    display: block;
+  }
+
+  input, textarea {
+    min-width: 100%;
+  }
 }
