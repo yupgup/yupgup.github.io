@@ -1,7 +1,7 @@
 /* Begin reset */
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 *, *:before, *:after {
@@ -48,12 +48,7 @@ body {
 }
 
 .main, .footer {
-<<<<<<< HEAD
   padding: 3.5em 1.5em;
-=======
-  padding: 3.5em 5.5em;
-  max-width: 2000px;
->>>>>>> 9c97baf9166fa285a12daf71188d608709e04667
 }
 
 p, li {
@@ -264,6 +259,10 @@ input, textarea {
 }
 
 @media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
   h1 {
     font-size: 5rem;
   }
