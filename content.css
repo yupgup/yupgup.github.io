@@ -48,7 +48,12 @@ body {
 }
 
 .main, .footer {
+<<<<<<< HEAD
   padding: 3.5em 1.5em;
+=======
+  padding: 3.5em 5.5em;
+  max-width: 2000px;
+>>>>>>> 9c97baf9166fa285a12daf71188d608709e04667
 }
 
 p, li {
