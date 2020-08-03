@@ -49,6 +49,7 @@ body {
 
 .main, .footer {
   padding: 3.5em 5.5em;
+  max-width: 2000px;
 }
 
 p, li {
@@ -255,10 +256,18 @@ input, textarea {
 }
 
 @media (max-width: 900px) {
+  html {
+    font-size: 12px;
+  }
   .main, .footer {
     padding: 1.5em 2.5em;
   }
-
+  h1 {
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 2em;
+  }
   .header-details, .work-details, .price-details, .work-form {
     display: block;
   }
