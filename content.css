@@ -48,16 +48,7 @@ body {
 }
 
 .main, .footer {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  padding: 3.5em 5.5em;
-  max-width: 2000px;
-=======
   padding: 3.5em 1.5em;
->>>>>>> content
-=======
-  padding: 3.5em 1.5em;
->>>>>>> dc20505b66aefc325fae9b716d660f33f5fdf1c4
 }
 
 p, li {
@@ -82,8 +73,6 @@ br.hide-sm {
 }
 
 /* Header */
-
-
 .header-details {
   margin-top: 4em;
 }
@@ -267,35 +256,6 @@ input, textarea {
   border-bottom: 2px solid #8B335B;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-@media (max-width: 900px) {
-  html {
-    font-size: 12px;
-  }
-  .main, .footer {
-    padding: 1.5em 2.5em;
-  }
-  h1 {
-    font-size: 4em;
-  }
-  h2 {
-    font-size: 2em;
-  }
-  .header-details, .work-details, .price-details, .work-form {
-    display: block;
-  }
-
-  input, textarea {
-    min-width: 100%;
-  }
-}
-=======
-
-
-
-=======
->>>>>>> dc20505b66aefc325fae9b716d660f33f5fdf1c4
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -353,8 +313,3 @@ input, textarea {
     margin-left: 5em;
   }
 }
-<<<<<<< HEAD
->>>>>>> content
-=======
-
->>>>>>> dc20505b66aefc325fae9b716d660f33f5fdf1c4
