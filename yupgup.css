@@ -939,6 +939,7 @@ a.projectNavLink:first-child {
 @media (min-width: 1000px) {
   :root {
     --font-size        : 20px;
+    --block-space      : calc(var(--space) * 3);
   }
 
   .slogan-text {
