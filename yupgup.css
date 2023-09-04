@@ -1,952 +1,495 @@
-/*
-  ¸.·´¯`·.´¯`·.¸¸.·´¯`·.¸><(((º>
-  YupGup.com CSS File
-  Version: 1.0 - A Strange New Place
+@import url("//hello.myfonts.net/count/3aef1f"); /* Pull in Gilroy from MyFonts */
 
-  This file is meant to read by machines *and* humans
-  and thus should be thoroughly enjoyable.
-*/
-
-/*
-  CONFIG
-  Gotta keep it all configured.
-  For the kids: https://youtu.be/XN32lLUOBzQ
+/**
+ * YupGup.com 2.0 - Endler, the Flying Fish of Doom 🐟
+ *
 */
 
 :root {
-  /* Palette */
-  --mandy          : #E54859;
-  --brick          : #C44057;
-  --dusk           : #AB3A58;
-  --camelot        : #8B335B;
-  --finn           : #683057;
-  --bossanova      : #512C57;
+  /* Colors */
+  --brand1       : #8C0355;
 
-  --dark-gray      : #191919;
-  --med-gray       : #555555;
-  --light-gray     : #DDDDDD;
-
-  /* Grid & Spacing */
-  --site-width     : 960px;
-  --gutters        : 1.25rem;
-  --space          : 1rem;
-  --block-space    : calc(var(--space) * 2);
+  --color1       : #066FE0;
+  --color2       : #017B65;
+  --color3       : #FAB3A9;
+  --color4       : #EFF3F7;
+  --color5       : #085C78;
+  --color6       : #19535F;
+  --color7       : #594AC6;
+  --color8       : #FE692F;
+  --text-color   : #2D2F2A;
 
   /* Typography */
-  --font-size      : 18px;
+  --font-body: 'Gilroy',sans-serif;
+  --font-size: 16px;
+
+  --h1-font-size: 2.6rem;
+  --h2-font-size: 2.15rem;
+  --h3-font-size: 1.8rem;
+  --h4-font-size: 1.5rem;
+  --h5-font-size: 1.25rem;
+  --h6-font-size: 1.05rem;
+
+  /* Spacing & Grid */
+  --max-width: 1360px;
+  --gutters: 20px;
+  --content-width: calc(var(--max-width) - (var(--gutters) * 2));
+  --space: 1rem;
+  --col-gap: calc(var(--space) * 2);
+
+  /* Element Styles */
+  --form-elem-height: 50px;
+  --form-elem-padding: .35em .75em;
+  --form-elem-border: 2px solid var(--text-color);
+  --border-radius: 5px;
+  --hr-border: 2px solid var(--color3);
+  --cta-bar-height: 10px;
+  --cta-font-size: 1.5rem;
+
+  --card-border: 1px solid #E2DFDF;
 }
 
-/*
-  FONTS
-  Setup our fonts, since they're a dependency and can block. Get that whole
-  mess out of the way. Have you ever tried to say "fonts" backwards?
-
-  Stnof.
+/* 💣 RESET
+ * Reset provided by our friend Andy Bell
+ * Check it, yo: https://hankchizljaw.com/wrote/a-modern-css-reset/
 */
 
-@font-face {
-  font-family: 'SofiaPro';
-  src: url('fonts/sofiapro-regular.woff2') format('woff2'),
-       url('fonts/sofiapro-regular.woff') format('woff');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'SofiaPro';
-  src: url('fonts/sofiapro-bold.woff2') format('woff2'),
-       url('fonts/sofiapro-bold.woff') format('woff');
-  font-weight: bold;
-}
-
-/*
-  RESET
-  Ganked from: https://alligator.io/css/minimal-css-reset/
-  Thanks @alligatorio for being rad af.
-*/
-
-html {
-  box-sizing: border-box;
-  /* Pray, *pray* to all the gods we don't ever hit Arial */
-  font-family: 'SofiaPro', Helvetica, Arial, sans-serif;
-  font-size: var(--font-size);
-  font-weight: normal;
-  color: var(--dark-gray);
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-  margin: 0;
+ul[class],
+ol[class] {
   padding: 0;
-  font-weight: normal;
 }
 
-ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.65;
+}
+
+ul[class],
+ol[class] {
   list-style: none;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
 }
 
 img {
   max-width: 100%;
-  height: auto;
+  display: block;
 }
 
-/*
-  GLOBALS
+article > * + * {
+  margin-top: var(--space);
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 📖 Typography
+ *
 */
-h1, h2, h3 {
-  margin-bottom: .5rem;
+
+/* URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/regular/ */
+@font-face {font-family: 'Gilroy';font-weight: normal;font-style: normal;src: url('/fonts/3AEF1F_0_0.eot');src: url('/fonts/3AEF1F_0_0.eot?#iefix') format('embedded-opentype'),url('/fonts/3AEF1F_0_0.woff2') format('woff2'),url('/fonts/3AEF1F_0_0.woff') format('woff'),url('/fonts/3AEF1F_0_0.ttf') format('truetype');}
+
+/* URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/extra-bold/ */
+@font-face {font-family: 'Gilroy';font-weight: bold;font-style: normal;src: url('/fonts/3AEF1F_1_0.eot');src: url('/fonts/3AEF1F_1_0.eot?#iefix') format('embedded-opentype'),url('/fonts/3AEF1F_1_0.woff2') format('woff2'),url('/fonts/3AEF1F_1_0.woff') format('woff'),url('/fonts/3AEF1F_1_0.ttf') format('truetype');}
+
+html {
+  font-size: var(--font-size);
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5 {
   line-height: 1.2;
 }
 
-h2 {
-  font-size: 1.7rem;
-  font-weight: bolder;
+h1, .h1 {
+  font-size: var(--h1-font-size);
 }
 
-h3 {
-  font-size: 1.4rem;
+h2, .h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3, .h3 {
+  font-size: var(--h3-font-size);
+}
+
+h4, .h4 {
+  font-size: var(--h4-font-size);
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* 🧩 Elements
+ * Little bits of things that make up the site.
+*/
+
+hr {
+  margin: var(--space) 0;
+  border-bottom: var(--hr-border);
+}
+
+hr.has-waves {
+  display: block;
+  height: 32px;
+
+  border: none;
+  background-image: url(/img/wave.svg);
+  background-repeat: no-repeat;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+input:not([type='checkbox']),
+input:not([type='radio']),
+textarea,
+select {
+  width: 100%;
+  padding: var(--form-elem-padding);
+  border: var(--form-elem-border);
+  border-radius: var(--border-radius);
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('/img/caret-down.svg') no-repeat right 14px center;
+  background-size: 20px;
+}
+
+button,
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--form-elem-padding);
+  border: none;
+  border-radius: var(--border-radius);
+  background: var(--brand1);
+  text-decoration: none;
+  color: #FFF;
+
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  margin-bottom: .35rem;
   font-weight: bold;
-}
-
-p,
-.lead {
-  margin-bottom: var(--space);
 }
 
 .lead {
   font-size: 1.25rem;
 }
 
-p,
-.siteMain li {
-  line-height: 1.35;
-}
-
-.subHeading {
+.cta {
   position: relative;
-  /*
-    inline-block allows us to neatly have the border match the copy without extra markup. Consider a <span> if this needs to change.
-  */
   display: inline-block;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: calc(var(--space) * 1.2);
-  padding: .6em 1em;
-  border: none;
-  border-radius: 14px;
-  background: var(--mandy);
-  background: linear-gradient(to bottom, var(--mandy) 0%, #B2393B 100%);
-  font-size: 1rem;
+  margin-bottom: calc(var(--space) + var(--cta-bar-height));
   font-weight: bold;
-  line-height: 1;
-  color: white;
   text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
+  color: var(--text-color);
 }
 
-.btn:hover {
-  background: var(--dusk);
-}
-
-label {
-  display: block;
-  margin-bottom: .35em;
-  font-weight: bold;
-}
-
-input {
-  padding: .6em;
-  font-size: 1rem;
-}
-
-.broughtBy {
-  margin: 6px 0 0;
-  font-size: .75rem;
-  color: var(--med-gray);
-}
-
-/*
-  THEMES
-*/
-.theme-brick {
-  background: var(--brick);
-  color: var(--bossanova);
-}
-
-.siteMain a,
-.topHat span {
-  padding-bottom: .15em;
-  box-shadow: 0 -5px  rgba(104, 48, 87, .5) inset;
-  text-decoration: none;
-  color: var(--finn);
-}
-
-.siteMain a:hover,
-.topHat:hover span {
-  box-shadow: none;
-}
-
-/*
-  ANIMATIONS
-*/
-
-@keyframes color-pulse {
-  20% {
-    fill: var(--mandy);
-  }
-
-  40% {
-    fill: var(--brick);
-    transform: rotateX(-10deg);
-  }
-
-  60% {
-    fill : var(--dusk);
-    transform: rotateX(-10deg);
-  }
-
-  80% {
-    fill: var(--camelot);
-  }
-}
-
-/*
-  LAYOUT
-*/
-
-.siteMain {
-  margin-top: 20vw;
-}
-
-.block {
-  padding: var(--block-space) var(--gutters);
-}
-
-.block p:last-child {
-  margin-bottom: 0;
-}
-
-/*
-  Containers conform to our grid. Blocks can contain.. err.. containers.. As
-  such, a container is kind of dumb. It just sets up our max width.
-*/
-.container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: var(--site-width);
-}
-
-/*
-  Setups the pseudo elements we need to handle visual
-  transitions between blocks.
-*/
-.transition {
-  position: relative;
-}
-
-.transition:before,
-.transition:after,
-.transition--before:before,
-.transition--after:after {
+.cta::before {
   position: absolute;
   left: 0;
-  z-index: -1;
-  display: block;
+  bottom: calc(-1 * var(--cta-bar-height));
   width: 100%;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: 110% auto;
+  height: var(--cta-bar-height);
+  background: var(--color3);
   content: "";
 }
 
-/*
-  LAYOUT: Header
+.more-cta {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.more-cta::after {
+  --size: 1em;
+  position: relative;
+  top: calc(50% - (var(--size) / 1.8));
+
+  display: inline-block;
+  margin-left: .25ch;
+
+  width: var(--size);
+  height: var(--size);
+
+  background: currentColor;
+  -webkit-mask-image: url('/img/caret-down.svg');
+  mask-image: url('/img/caret-down.svg');
+  -webkit-mask-size: contain;
+  mask-size: contain;
+
+  content: "";
+
+  transform: rotate(-90deg);
+}
+
+.button-group {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+
+/* 🏗 Grid
+ * Based on a 1260px max width for content. Max 3 columns.
 */
 
-.siteHeader {
+.container {
+  margin: 0 auto;
+  padding: 0 var(--gutters);
+  max-width: var(--max-width);
+}
+
+.container.is-focal {
+  --max-width: 48rem;
+}
+
+[class*="col-"] {
+  display: flex;
+  flex-direction: column;
+  gap: var(--col-gap);
+}
+
+.double-gap {
+  gap: calc(var(--col-gap) * 2);
+}
+
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+.mt-4 { margin-top: 4rem; }
+
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-3 { margin-bottom: 3rem; }
+.mb-4 { margin-bottom: 4rem; }
+
+/* Blocks
+ * Basically DIVs. Huge content areas that contain sections.
+*/
+
+.block {
+  padding: calc(var(--space) * 4) 0;
+  background-color: var(--theme);
+  color: var(--text-color);
+}
+
+.block-heading {
+  margin-bottom: 1.5rem;
+}
+
+.subheading {
+  margin-bottom: .5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text-color);
+  opacity: .6;
+}
+
+.block-header .cta {
+  font-size: var(--cta-font-size);
+}
+
+.block-header > * {
+  max-width: 40rem;
+}
+
+.block-media {
+  position: relative;
+}
+
+/* Block Modifiers */
+.has-subhead {
   display: flex;
   flex-direction: column;
 }
 
-.homelink {
-  display: block;
-  padding: 5vw 0;
-  text-align: center;
+.has-subhead > * {
+  order: 1;
 }
 
-.guppy {
-  width: 10vw;
-  min-width: 80px;
-  max-width: 180px;
+.has-subhead .subheading {
+  order: 0;
 }
 
-.guppy .st0 {
-  fill: var(--mandy);
+/* Block Themes */
+.theme-color1 { --theme: var(--color1); }
+.theme-color2 { --theme: var(--color2); }
+.theme-color3 { --theme: var(--color3); }
+.theme-color4 { --theme: var(--color4); }
+.theme-color5 { --theme: var(--color5); }
+.theme-color6 { --theme: var(--color6); }
+
+.theme-color1,
+.theme-color2,
+.theme-color5,
+.theme-color6 {
+  --text-color: #FFF;
 }
 
-.guppy .st1 {
-  fill: var(--brick);
-}
-
-.guppy .st2 {
-  fill: var(--dusk);
-}
-
-.guppy .st3 {
-  fill: var(--camelot);
-}
-
-.guppy .st4 {
-  fill: var(--bossanova);
-}
-
-.homelink:hover .st0,
-.homelink:hover .st1,
-.homelink:hover .st2,
-.homelink:hover .st3 {
-  animation: color-pulse 1s infinite linear;
-  transform-origin: center;
-}
-
-.homelink:hover .st1 {
-  animation-delay: 250ms;
-}
-
-.homelink:hover .st2 {
-  animation-delay: 500ms;
-}
-
-.homelink:hover .st3 {
-  animation-delay: 750ms;
-}
-
-.slogan,
-.newsletter {
-  position: relative;
-  margin-top: 4vw;
-  padding-bottom: 20vw;
-  background: var(--bossanova);
-}
-
-.slogan:before,
-.newsletter:before {
-  top: -9vw;
-  height: 10vw;
-  background-image: url('img/swish.svg');
-}
-
-.slogan-text {
-  max-width: 30ch;
-  font-size: 2rem;
-  text-align: center;
-  color: #FFFFFF;
-}
-
-.siteNav {
-  position: relative;
-  z-index: 10;
-  order: 3;
-  background: var(--brick);
-}
-
-.siteNav:before,
-.siteNav:after {
-  height: 10vw;
-}
-
-.siteNav:before {
-  top: calc(-10vw + 2px);
-  background-image: url('img/swish2.svg');
-  transform: rotate(-180deg);
-}
-
-.siteNav:after {
-  bottom: calc(-9vw + 2px);
-  background-image: url('img/nav.svg');
-  transform: rotate(-180deg);
-}
-
-.siteNav ul {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-
-.siteNav li {
-  width: 50%;
-}
-
-.siteNav a {
-  --font-size: 1.3rem;
-
-  display: flex;
-  padding: .8em 1em;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  height: calc(var(--font-size) * 2.4);
-  font-size: var(--font-size);
-  text-align: center;
-  text-decoration: none; /* a11y exception */
-  font-weight: bold;
-  color: #FFFFFF;
-}
-
-.siteNav a:hover {
-  background: #FFFFFF;
-  color: var(--brick);
-}
-
-/*
-  LAYOUT: Footer
+/* 🌎 Page Themes
+ * Main themes. Largely change the nav and hero of the page.
 */
 
-.siteFooter {
-  position: relative;
-  margin-top: 10vw;
-  background: var(--bossanova);
-  color: #FFFFFF;
+.page-theme-1 { --page-theme: var(--color1); }
+.page-theme-2 { --page-theme: var(--color2); }
+.page-theme-3 { --page-theme: var(--color3); }
+.page-theme-4 { --page-theme: var(--color4); }
+.page-theme-5 { --page-theme: var(--color5); }
+.page-theme-6 { --page-theme: var(--color6); }
+.page-theme-7 { --page-theme: var(--color7); }
+
+[class*="page-theme-"]
+:is(.site-nav a, .hero, .hero a) {
+  color: #FFF;
 }
 
-.siteFooter:before {
-  top: -9vw;
-  height: 10vw;
-  background-image: url('img/swish.svg');
+[class*="page-theme-"] .site-header .logo {
+  background-color: #FFF;
 }
 
-
-.siteFooter .block-heading {
-  font-size: 3rem;
-}
-
-.siteFooter .btn {
-  color: var(--bossanova)
-}
-
-.bod-logo {
-  max-width: 150px;
-}
-
-/*
-  BLOCKS
-  Basically major divisions of the page that aren't header/footer.
+/* 🍄 Modifiers
+ * Generic modifiers that can be applied to most things.
 */
-
-.block-header {
-  margin-bottom: var(--block-space);
-}
-
-.block-heading {
-  margin-bottom: var(--space);
-}
-
-.work {
-  position: relative;
-  margin-top: 4vw;
-  margin-bottom: 10vw;
-}
-
-.work:before,
-.work:after {
-  height: 10vw;
-  background-image: url('img/swish2.svg');
-}
-
-.work:before {
-  top: -9vw;
-  transform: rotate(-180deg);
-}
-
-.work:after {
-  bottom: -9vw;
-}
-
-/* Newsletter block */
-
-.newsletter {
-  color: white;
-}
-
-.newsletter h1,
-.newsletter h2 {
-  margin-bottom: var(--block-space);
-  text-align: center;
-}
-
-.newsletter a {
-  color: white;
-  box-shadow: 0 -5px  var(--camelot) inset;
-}
-
-.newsletter .copyright {
-  margin-top: var(--block-space);
-  text-align: center;
-}
-
-.newsletterForm {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  flex-flow: row wrap;
-  margin: 0 auto var(--space);
-  max-width: 500px;
-}
-
-.newsletterForm .field {
-  margin-right: .35rem;
-  flex: 1 1 auto;
-}
-
-.newsletterForm .btn {
-  color: white;
-}
-
-.newsletterForm .btn,
-.newsletterForm .email {
-  height: 50px;
-  border-radius: .35em;
-}
-
-.newsletterForm .email {
-  display: block;
-  width: 100%;
-  border: 6px solid var(--finn);
-}
-
-.newsletterForm .disclaimer {
-  display: block;
-  margin: .9rem auto 0;
-  max-width: 800px;
-  font-size: .65em;
-}
-
-/*
-  MODULES
-  Bits of pieces of HTML that together make a single, compact *thing*. These go
-  well with <section>, <form>, or <article>
-*/
-
-
-/* Services */
-.services img {
-  display: none;
-}
-
-.offering {
-  margin-bottom: var(--block-space);
-}
-
-.offering .subHeading:after {
-  background: var(--finn);
-}
-
-.gridList li {
-  margin-bottom: var(--space);
-  list-style-position: inside;
-  list-style-type: disc;
-}
-
-
-/* Work */
-.clientList {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-.clientList li {
-  display: inline-flex;
-  align-items: center;
-  margin-bottom: calc(var(--space) * 3);
-  margin-right: calc(var(--space) * 3);
-}
-
-.clientList img {
-  height: 80px;
-  max-width: 100%;
-}
-
-.clientList .landscape-logo {
-  height: 30px;
-}
-
-.testimonial-text,
-.testimonial-attr {
-  position: relative;
-}
-
-.testimonial-text:before {
+.sr-only {
   position: absolute;
-  top: -.6rem;
-  left: -3rem;
-  display: block;
-  font-size: 6rem;
-  display: block;
-  content: "\201C";
-  opacity: .7;
-  line-height: 1;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
 }
 
-.testimonial-attr {
-  font-size: .9rem;
-}
-
-.testimonial-attr:before {
-  margin-right: .5em;
-  width: 1.25rem;
-  height: 2px;
-  display: inline-block;
-  vertical-align: middle;
-  background: currentColor;
-  line-height: 1;
-  content: "";
-}
+/* ??? - Should use --text-color? */
+.color1 { color: var(--color1); }
+.color2 { color: var(--color2); }
+.color3 { color: var(--color3); }
+.color4 { color: var(--color4); }
+.color5 { color: var(--color5); }
+.color6 { color: var(--color6); }
+.color7 { color: var(--color7); }
+.color8 { color: var(--color8); }
 
 
-/* About */
-.gup {
-  margin-top: calc(var(--space) * 2);
-}
-
-.gup-avatar {
-  display: flex;
-  margin: 0 0 var(--space);
-  padding: calc(var(--space) * 1.5);
-  max-width: 300px;
-  min-width: 240px;
-  border-radius: 10% 30%;
-  background-image: url('img/bio-bg1.svg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 180% 150%;
-  align-items: center;
-  justify-content: center;
-}
-
-.gup-avatar img {
-  border: 6px solid #FFFFFF;
-  border-radius: 10% 30%;
-}
-
-.gup:nth-child(odd) .gup-avatar {
-  border-radius: 30% 10%;
-  background-image: url('img/bio-bg2.svg');
-}
-
-.gup:nth-child(odd) img {
-  border-radius: 30% 10%;
-}
-
-.gup-card {
-  flex: 0 1 54ch;
-}
-
-.gup-name,
-.gup-title {
-  margin-bottom: var(--space);
-}
-
-.gup-title {
-  text-transform: uppercase;
-}
-
-/* Contact */
-.contactNav {
-  margin: 1.5rem 0;
-}
-
-.contactNav .btn {
-  font-size: 1.8rem;
-}
-
-/* Social Icons */
-.socialNav {
-  margin: 3rem 0;
-}
-
-.socialNav a {
-  display: inline-block;
-  margin-right: 1rem;
-  margin-bottom: var(--space);
-  box-shadow: none;
-}
-
-.socialNav .socialIcon {
-  display: inline-block;
-  width: 44px;
-  height: 44px;
-  fill: var(--camelot);
-}
-
-.socialNav .socialIcon:hover {
-  fill: var(--dusk);
-}
-
-.socialNav .socialIcon:last-child {
-  margin-right: 0;
-}
-
-/*
-  LANDING PAGES
-*/
-.topHat {
-  display: block;
-  padding: 6px 10px 12px;
-  background: whitesmoke;
-  font-size: .8rem;
-  text-decoration: none;
-}
-
-.topHat:before {
-  display: inline-block;
-  margin-right: .3em;
-  height: 1rem;
-  width: 1rem;
-  content: "←";
-}
-
-/*
-  CASE STUDY
+/* 📓 Long-Form Content Styles
+ * Should be used for blog posts and any situation where content is length.
 */
 
-.caseStudyPage .siteMain {
-  margin-top: 0;
+.content > * + * {
+  margin-top: 2rem;
 }
 
-.caseStudyPage .container {
-  max-width: 720px;
+.content > figure,
+.gallery {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
-.caseStudyHeader {
-  position: relative;
-  margin-bottom: 10vw;
-  background: var(--finn);
-  text-align: center;
-  color: white;
-}
-
-.caseStudyHeader:after {
-  bottom: -8vw;
-  height: 10vw;
-  background-image: url('../img/swish3.svg');
-}
-
-.caseStudyHeader .lead {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.caseStudy-date {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: var(--mandy);
-}
-
-.workDisplay {
-  margin-bottom: var(--space);
-  padding-left: var(--gutters);
-  padding-right: var(--gutters);
-}
-
-.workDisplay .container {
-  text-align: center;
-}
-
-.workDisplay--list .img {
-  display: block;
-  margin-bottom: var(--space);
-}
-
-@media (min-width: 720px) {
-  .workDisplay--list .container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .workDisplay--list .img {
-    margin-bottom: 0;
-    max-width: calc(100% * 1/3 - 20px);
+@media (min-width: 600px) {
+  :root {
+    --font-size: 20px;
+    --h1-font-size: 3.5rem;
+    --h2-font-size: 2.8rem;
+    --h3-font-size: 2.2rem;
   }
 }
 
-.projectNav {
-  display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
-  padding: 0 var(--gutters);
-}
-
-a.projectNavLink { /* FIXME: Specificity no-no */
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  flex: 0 1 300px;
-  margin-bottom: 1.5rem;
-  padding: .75em;
-  border: 2px solid var(--light-gray);
-  border-radius: 14px;
-  box-shadow: none;
-  text-align: right;
-}
-
-a.projectNavLink:first-child {
-  margin-right: 1rem;
-}
-
-.projectNavLink:hover {
-  border-color: var(--dusk);
-}
-
-.projectNavLink:after {
-  position: absolute;
-  top: 15%;
-  left: .5em;
-  height: 70%;
-  width: 38px;
-  background-image: url(img/button-arrow.svg);
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-  transform: rotate(180deg);
-  content: "";
-}
-
-.projectNavLink-projectName {
-  display: block;
-  font-size: .8rem;
-  font-weight: bold;
-}
-
-.projectNavLink:nth-child(2) {
-  margin-left: auto;
-  text-align: left;
-}
-
-.projectNavLink:nth-child(2):after {
-  left: auto;
-  right: .5em;
-  transform: rotate(0);
-}
-
-/*
-  MEDIA QUERIES
-*/
-
-@media (min-width: 720px) {
-  .block-heading,
-  .lead,
-  .subLead,
-  .siteNav ul {
-    max-width: 50ch;
+@media (min-width: 768px) {
+  [class*="col-"] {
+    display: grid;
+    flex-direction: initial;
   }
 
-  .slogan,
-  .newsletter {
-    padding-bottom: 12vw;
+  .col-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .siteNav ul {
-    margin: 0 auto;
-    justify-content: space-between;
+  .col-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .siteNav li {
-    width: auto;
+  .col-1fr-max {
+    grid-template-columns: 1fr max-content;
   }
 
-  .siteMain {
-    margin-top: 8vw;
+  .col-2\/1fr {
+    grid-template-columns: 2fr 1fr;
   }
 
-  .services .block-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  /* TODO: Too specific! Bad developer! Bad! */
-  .services .block-header .wrap {
-    flex: 1;
-    margin-right: calc(var(--space) * 2);
-  }
-
-  .services .block-header img {
-    display: inline-flex;
-    min-width: 240px;
-  }
-
-  .gridList {
+  .col-2-stretch {
     display: flex;
     flex-flow: row wrap;
   }
 
-  .gridList li {
-    box-sizing: border-box;
-    width: 33.33%;
-  }
-
-  .clientList li {
-    display: flex;
-    align-items: center;
-    margin-right: calc(var(--space) * 6);
-  }
-
-  .clientList img {
-    height: 100px;
-  }
-
-  .clientList .landscape-logo {
-    height: 40px;
-  }
-
-  .gup {
-    display: flex;
-  }
-
-  .gup-avatar {
-    margin-right: calc(var(--space) * 2);
-  }
-
-  .gup-card {
-    padding-top: 2rem;
-  }
-
-  .socialNav a {
-    margin-right: 1.5rem;
-  }
-
-  .socialNav .socialIcon {
-    width: 64px;
-    height: 64px;
-  }
-
-  .projectNavLink {
-    margin-bottom: 0;
+  .col-2-stretch > * {
+    flex: calc(50% - var(--col-gap) / 2);
   }
 }
 
-@media (min-width: 1000px) {
-  :root {
-    --font-size        : 20px;
-    --block-space      : calc(var(--space) * 3);
-  }
-
-  .slogan-text {
-    font-size: 3rem;
-  }
-
-  .projectNav {
-    padding: 0;
+@media (min-width: 920px) {
+  .block {
+    padding: calc(var(--space) * 6) 0;
   }
 }
+
