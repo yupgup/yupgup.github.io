@@ -16,6 +16,7 @@
   --color5       : #085C78;
   --color6       : #19535F;
   --color7       : #594AC6;
+  --color8       : #FE692F;
   --text-color   : #2D2F2A;
 
   /* Typography */
@@ -293,58 +294,6 @@ label {
   text-indent: -999rem;
 }
 
-/* 🛹 Components
- * Combos of elements, usually complex lists, collections, etc.
-*/
-
-.field-group {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  gap: .5ch;
-}
-
-.client-list {
-  display: flex;
-  flex-flow: row wrap;
-  gap: calc(var(--col-gap) * 2);
-  margin-top: calc(var(--space) * 3);
-}
-
-.social-nav {
-  margin-bottom: var(--space);
-}
-
-.social-nav ul {
-  display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-}
-
-.social-nav li {
-  list-style: none;
-}
-
-.social-nav a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--text-color);
-}
-
-.social-nav a:hover,
-.social-nav a:active {
-  color: var(--color1);
-}
-
-.social-nav .social-icon {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-}
-
-
 /* 🏗 Grid
  * Based on a 1260px max width for content. Max 3 columns.
 */
@@ -378,80 +327,6 @@ label {
 .mb-2 { margin-bottom: 2rem; }
 .mb-3 { margin-bottom: 3rem; }
 .mb-4 { margin-bottom: 4rem; }
-
-/* 🗺 Regions
- * Major areas of the all pages (header, nav, & footer)
-*/
-
-.site-header {
-  background-color: var(--page-theme, transparent);
-}
-
-.site-header > .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row wrap;
-  gap: calc(var(--col-gap) / 3);
-  padding-top: var(--space);
-}
-
-.site-header .root-link {
-  flex: 0 0 auto;
-  height: 32px;
-}
-
-.site-nav {
-  flex: 1;
-}
-
-.site-nav ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  gap: 1rem;
-
-}
-
-.site-nav li {
-  flex: 1;
-  display: flex;
-  list-style: none;
-}
-
-.site-nav a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: .5em 0;
-  font-size: 1.2rem;
-  text-decoration: none;
-  color: var(--color1);
-  font-weight: bold;
-}
-
-.site-footer {
-  padding-bottom: calc(var(--space) * 3);
-}
-
-.site-footer .container {
-  display: flex;
-  flex-direction: column;
-  gap: var(--col-gap);
-}
-
-.site-footer .root-link {
-  height: 44px;
-  background-color: var(--text-color);
-}
-
-.site-footer-contact a {
-  color: var(--text-color);
-}
-
-.site-footer .social-nav {
-  margin-top: calc(var(--space) * 2);
-}
 
 /* Blocks
  * Basically DIVs. Huge content areas that contain sections.
@@ -501,23 +376,6 @@ label {
   order: 0;
 }
 
-.has-b-border {
-  position: relative;
-}
-
-.has-b-border:after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  display: block;
-  width: var(--content-width);
-  max-width: 100%;
-  height: 1px;
-  border-bottom: var(--hr-border);
-  content: "";
-  transform: translateX(-50%);
-}
-
 /* Block Themes */
 .theme-color1 { --theme: var(--color1); }
 .theme-color2 { --theme: var(--color2); }
@@ -531,59 +389,6 @@ label {
 .theme-color5,
 .theme-color6 {
   --text-color: #FFF;
-}
-
-/* Generic Hero
- * Heroes use page colors
-*/
-.hero {
-  background-color: var(--page-theme, transparent);
-}
-
-/* Home Hero */
-.home-hero {
-  padding: calc(var(--space) * 4) 0 calc(var(--space) * 8);
-}
-
-.home-hero .block-heading {
-  color: var(--color2);
-}
-
-/* Contact Block */
-.contact-details {
-  margin-bottom: calc(var(--space) * 2);
-}
-
-.contact-details .cta {
-  font-size: var(--cta-font-size);
-  color: var(--color2);
-}
-
-/* Newsletter Signup */
-.newsletter-signup-heading,
-.newsletter-signup form {
-  margin-bottom: var(--space);
-}
-
-.newsletter-signup [type="email"] {
-  flex: 3 1 30ch;
-}
-
-.newsletter-signup .button {
-  flex: 1 1 10ch;
-}
-
-/* Case studies */
-.study-hero .study-hero-heading {
-  margin-bottom: .5rem;
-}
-
-.study-hero-heading {
-  font-size: var(--h3-font-size);
-}
-
-.study-duration {
-  font-size: var(--h6-font-size);
 }
 
 /* 🌎 Page Themes
@@ -628,6 +433,8 @@ label {
 .color4 { color: var(--color4); }
 .color5 { color: var(--color5); }
 .color6 { color: var(--color6); }
+.color7 { color: var(--color7); }
+.color8 { color: var(--color8); }
 
 
 /* 📓 Long-Form Content Styles
@@ -650,22 +457,6 @@ label {
     --h1-font-size: 3.5rem;
     --h2-font-size: 2.8rem;
     --h3-font-size: 2.2rem;
-  }
-
-  .site-header {
-    padding-top: 40px;
-  }
-
-  .site-header > .container {
-    justify-content: space-between;
-  }
-
-  .site-nav {
-    max-width: max-content;
-  }
-
-  .site-nav ul {
-    gap: 1.5rem;
   }
 }
 
@@ -698,30 +489,6 @@ label {
 
   .col-2-stretch > * {
     flex: calc(50% - var(--col-gap) / 2);
-  }
-
-  .site-header .root-link {
-    height: 38px;
-  }
-
-  .work-shots {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .client-list li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .site-footer .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-  }
-
-  .site-footer .social-nav {
-    margin: 0;
   }
 }
 
