@@ -173,20 +173,23 @@ p:last-child {
 */
 
 hr {
-  margin: var(--gap) 0;
+  margin: var(--space) 0;
   border-bottom: var(--hr-border);
+}
+
+hr.has-waves {
+  display: block;
+  height: 32px;
+
+  border: none;
+  background-image: url(/img/wave.svg);
+  background-repeat: no-repeat;
 }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-
-input,
-select,
-button {
-  height: 50px;
 }
 
 input:not([type='checkbox']),
@@ -207,14 +210,16 @@ select {
   background-size: 20px;
 }
 
-button {
+button,
+.button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   padding: var(--form-elem-padding);
   border: none;
   border-radius: var(--border-radius);
-  background: var(--text-color);
+  background: var(--brand1);
+  text-decoration: none;
   color: #FFF;
 
   cursor: pointer;
@@ -278,20 +283,10 @@ label {
   transform: rotate(-90deg);
 }
 
-.logo {
-  display: inline-block;
-  aspect-ratio: 151.42 / 32;
-
-  background-color: var(--brand1);
-
-  -webkit-mask-image: url('/img/logo-black.svg');
-  mask-image: url('/img/logo-black.svg');
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-
-  text-indent: -999rem;
+.button-group {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
 }
 
 /* 🏗 Grid
