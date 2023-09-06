@@ -111,6 +111,7 @@ button,
 textarea,
 select {
   font: inherit;
+  font-weight: bolder;
 }
 
 @media (prefers-reduced-motion: reduce) {
