@@ -260,6 +260,10 @@ label {
   color: var(--text-color);
 }
 
+.description {
+  max-width: 85%;
+}
+
 .cta::before {
   position: absolute;
   left: 0;
