@@ -111,7 +111,6 @@ button,
 textarea,
 select {
   font: inherit;
-  font-weight: bolder;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -222,8 +221,24 @@ button,
   background: var(--brand1);
   text-decoration: none;
   color: #FFF;
-
+  font-weight: bolder;
   cursor: pointer;
+}
+
+.button:hover {
+  background: var(--color8);
+}
+
+.button2 {
+  border: 2px solid var(--brand1);
+  background: white;
+  color: var(--brand1);
+}
+
+.button2:hover {
+  border-color: var(--color8);
+  color: var(--color8);
+  background: white;
 }
 
 label {
