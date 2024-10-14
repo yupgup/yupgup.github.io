@@ -41,7 +41,7 @@
   --form-elem-height: 50px;
   --form-elem-padding: .35em .75em;
   --form-elem-border: 2px solid var(--text-color);
-  --border-radius: 5px;
+  --border-radius: 2px;
   --hr-border: 2px solid var(--color3);
   --cta-bar-height: 10px;
   --cta-font-size: 1.5rem;
