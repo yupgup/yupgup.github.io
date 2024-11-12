@@ -263,6 +263,7 @@ label {
 
 .description {
   max-width: 85%;
+  text-wrap: balance;
 }
 
 .cta::before {
